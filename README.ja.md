@@ -201,6 +201,17 @@ Tripo のモデル自体はこのリポジトリに含まれていません。�
 
 このプロンプトでゲームを作ったら、リンクとスクリーンショットを添えて[シェアしてください](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=show-your-game.yml)。エージェントや Tripo Studio がプロンプトどおりに動かなかったら、[教えてください](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=prompt-feedback.yml)。プロンプトの一行一行は、そうした報告から生まれました。詳しくは[コントリビュートの方法](CONTRIBUTING.md)（英語）へ。
 
+<a id="built-with"></a>
+
+## 使っているもの
+
+- [Tripo Studio](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_ja_built_with)：サンプルゲームの 3D モデルはすべてこれで作りました
+- [Claude Code](https://github.com/anthropics/claude-code)（モデル `claude-opus-5-5`）：このプロンプトで 4 つのゲームを作ったコーディングエージェント
+- [three.js](https://threejs.org)：描画、アニメーション、モデルの読み込み
+- [Vite](https://vite.dev)：開発サーバーとビルド
+- [Playwright](https://playwright.dev)：エージェント自身のテストプレイとスクリーンショット（各サンプルの `tools/`）
+- [glTF Transform](https://gltf-transform.dev)：LANTERN ALLEY のモデルチェック
+
 ---
 
 [TripoGrowthLab](https://github.com/TripoGrowthLab) がまとめています。カバー画像は AI で生成したコンセプトアートで、ゲームのスクリーンショットはサンプルの実際の画面です。[MIT ライセンス](LICENSE)の対象はプロンプト、サンプルのコード、私たちが書いたドキュメントで、Tripo の商標やあなたが生成したモデルは含みません。[権利について](RIGHTS.md)（英語）もご覧ください。

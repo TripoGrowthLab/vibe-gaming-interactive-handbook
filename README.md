@@ -201,6 +201,17 @@ The Tripo models themselves are not in this repository; your generations will di
 
 Made something with the prompt? [Share it](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=show-your-game.yml) with a link and a screenshot. Found a step where the agent or Tripo Studio did not do what the prompt says? [Report it](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=prompt-feedback.yml); every line in the prompt came from a report like that. See [contributing](CONTRIBUTING.md).
 
+<a id="built-with"></a>
+
+## Built with
+
+- [Tripo Studio](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_built_with): every 3D model in the example games
+- [Claude Code](https://github.com/anthropics/claude-code) with `claude-opus-5-5`: the coding agent that built all four games from the prompt
+- [three.js](https://threejs.org): rendering, animation and model loading
+- [Vite](https://vite.dev): dev server and build
+- [Playwright](https://playwright.dev): the agent's own play-tests and screenshots, in each example's `tools/`
+- [glTF Transform](https://gltf-transform.dev): model checks in LANTERN ALLEY
+
 ---
 
 Curated by [TripoGrowthLab](https://github.com/TripoGrowthLab). The cover is AI-generated conceptual artwork; the game screenshots are real captures of the examples. The [MIT license](LICENSE) covers the prompt, the example code and our documentation; it does not cover Tripo trademarks or models you generate. See [rights](RIGHTS.md).

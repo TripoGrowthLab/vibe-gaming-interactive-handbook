@@ -201,6 +201,17 @@ npm install && npm run dev
 
 用这条提示词做出了游戏？[发出来](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=show-your-game.yml)，附上链接和截图。发现 agent 或 Tripo Studio 没按提示词说的来？[告诉我们](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=prompt-feedback.yml)。提示词里的每一行都来自这样的反馈。见[参与方式](CONTRIBUTING.md)。
 
+<a id="built-with"></a>
+
+## 用到的工具
+
+- [Tripo Studio](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_zh_built_with)：示例游戏里的全部 3D 模型
+- [Claude Code](https://github.com/anthropics/claude-code)，模型 `claude-opus-5-5`：用这条提示词做出四个游戏的 coding agent
+- [three.js](https://threejs.org)：渲染、动画和模型加载
+- [Vite](https://vite.dev)：开发服务器和构建
+- [Playwright](https://playwright.dev)：agent 自己试玩和截图用的脚本，在每个示例的 `tools/` 里
+- [glTF Transform](https://gltf-transform.dev)：LANTERN ALLEY 的模型检查
+
 ---
 
 由 [TripoGrowthLab](https://github.com/TripoGrowthLab) 整理。封面是 AI 生成的概念图；游戏截图是示例游戏的真实画面。[MIT 协议](LICENSE)覆盖提示词、示例代码和我们编写的文档，不包括 Tripo 商标和你生成的模型。见[权利说明](RIGHTS.md)。
