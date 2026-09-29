@@ -1,0 +1,115 @@
+{
+  "art_style": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy.",
+  "entries": [
+    {
+      "id": "skier",
+      "kind": "person",
+      "size_m": 1.7,
+      "size_note": "height, standing in the T-pose, without skis",
+      "triangles": 10000,
+      "file": "public/assets/skier.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A cheerful young woman ski instructor, full body, standing in a T-pose facing the camera, arms straight out to the sides, legs slightly apart. Adult proportions about six heads tall, so the head is about one sixth of her height; arms long enough to reach mid-thigh when lowered. A fitted red ski jacket with a cream stripe across the chest, no wider than her shoulders; slim navy ski trousers; chunky orange ski boots; mittens; short hair tucked completely under a snug knitted beanie; goggles resting flat on the beanie. Clear space between the arms and the body and between the two legs. No skis, no poles, no scarf, no hood, no dangling straps or pom-pom, nothing loose. Single isolated object, centered, on a plain white background",
+      "animations": [
+        "idle",
+        "ski_glide: a skier holds a low ski stance with knees bent and feet together, arms bent forward at the sides, gently bobbing up and down in place",
+        "defeat_02"
+      ],
+      "animation_use": {
+        "idle": "state idle (title screen)",
+        "ski_glide": "states ski and carve (the carve lean is added in code)",
+        "defeat_02": "state crash (knocked over into the snow)"
+      },
+      "styles": "none"
+    },
+    {
+      "id": "skis",
+      "kind": "prop",
+      "size_m": 1.6,
+      "size_note": "longest edge = ski length",
+      "triangles": 800,
+      "file": "public/assets/skis.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A pair of skis lying flat side by side and parallel, seen from a slight angle; each ski is long and narrow, about sixteen times longer than wide, with a small gap between the two; the front tips curve gently upward; orange top surface with a cream stripe along the middle and chunky grey bindings at the centre. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "pine_tree",
+      "kind": "prop",
+      "size_m": 5.0,
+      "size_note": "longest edge = height; about 2.4 m wide",
+      "triangles": 1000,
+      "file": "public/assets/pine_tree.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A snowy pine tree about twice as tall as it is wide: a short thick brown trunk, then three stacked chunky cone-shaped layers of dark green needles that get narrower toward a pointed top, with thick white snow resting on the upper edge of each layer. Round from every side. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "boulder",
+      "kind": "prop",
+      "size_m": 1.8,
+      "size_note": "longest edge = width; 1.5 m deep, 1.2 m tall",
+      "triangles": 800,
+      "file": "public/assets/boulder.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A wide, low grey granite boulder, a little wider than it is deep and about one and a half times wider than it is tall, blocky faceted shape with one broad flat front face, and a thick cap of white snow on top. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "log",
+      "kind": "prop",
+      "size_m": 3.5,
+      "size_note": "longest edge = length; 0.6 m thick",
+      "triangles": 800,
+      "file": "public/assets/log.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A fallen tree log lying on its side, straight and round, about six times longer than it is thick, rough brown bark, light tan cut rings showing on both flat ends, a thin line of white snow along the top. No branches. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "snowman",
+      "kind": "prop",
+      "size_m": 1.8,
+      "size_note": "longest edge = height; about 1 m wide",
+      "triangles": 1500,
+      "file": "public/assets/snowman.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A friendly snowman facing the camera, almost twice as tall as it is wide: three stacked white snowballs getting smaller toward the top, a small upside-down wooden bucket as a hat, an orange carrot nose pointing straight forward, dark pebble eyes and smile, two short twig arms held close against the body, and a short red knitted scarf wrapped tightly around the neck. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "lift_pylon",
+      "kind": "prop",
+      "size_m": 7.0,
+      "size_note": "longest edge = height; about 1.2 m wide",
+      "triangles": 2000,
+      "file": "public/assets/lift_pylon.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A ski-lift support tower about six times taller than it is wide: a tall slim square steel mast painted grey with one yellow band near the bottom, standing on a chunky concrete footing block, with a short horizontal cross-arm at the top carrying two small pulley wheels, and a small yellow sign on the front of the mast. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "edge_fence",
+      "kind": "prop",
+      "size_m": 4.0,
+      "size_note": "longest edge = length; 1.2 m tall, very thin",
+      "triangles": 500,
+      "file": "public/assets/edge_fence.glb",
+      "prompt": "Bright stylised low-poly alpine ski-resort style, chunky simple faceted shapes, clean flat colours with soft shading, warm and cosy. A short straight section of ski-slope safety fence seen from the front: a flat bright orange mesh net panel about three times longer than it is tall, stretched between two round wooden posts, one at each end; the whole fence is very thin from front to back. Single isolated object, centered, on a plain white background",
+      "styles": "none"
+    }
+  ],
+  "busiest_moment": {
+    "when": "past about 2,500 m at top speed: rows every ~7.5 m, ~6.75 obstacles per row, 140 m of run visible",
+    "on_screen": {
+      "pine_tree": "~60 obstacles + ~67 scenery trees = 127 × 1,000 = 127,000",
+      "boulder": "~34 × 800 = 27,200",
+      "log": "~14 × 800 = 11,200",
+      "snowman": "~12 × 1,500 = 18,000",
+      "lift_pylon": "~6 × 2,000 = 12,000",
+      "edge_fence": "80 × 500 = 40,000",
+      "skier + skis": "10,000 + 800 = 10,800"
+    },
+    "triangles_total": 246200,
+    "triangles_with_shadow_pass": "about 490,000 processed per frame (everything is drawn again into the shadow map)",
+    "texture_memory": {
+      "as_exported": "8 models × 2K. One 2048² texture = 16 MB on the GPU, 21 MB with mipmaps. If each model has 3 maps (colour, normal, roughness/metal): 8 × 3 × 21 ≈ 512 MB. Too much for a phone.",
+      "plan": "Instances share textures, so only the 8 unique models count. At load time: keep Juno at 2K with colour + normal (~43 MB), shrink every prop to 1K and keep only its colour map (7 × 5.3 MB ≈ 37 MB), dropping normal maps that a flat low-poly look does not need. Total ≈ 80 MB."
+    },
+    "draw_calls": "~280 objects, plus the same again for shadows ≈ 560 if each model is one mesh. In Stage 5, draw repeated props (trees, fences, rocks) as instanced meshes: ≈ 20–30 draw calls.",
+    "phone_verdict": "Yes, with the Stage 5 plan: ~250k triangles is fine for a recent mid-range phone, textures shrunk to ~80 MB, and instancing for repeated props. Without shrinking the textures (~512 MB), older phones would likely run out of memory or reload the page."
+  }
+}

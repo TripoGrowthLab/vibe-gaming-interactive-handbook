@@ -1,0 +1,27 @@
+// Desktop screenshots of a bot-played round in both looks.
+import { chromium } from 'playwright-core';
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--enable-unsafe-swiftshader', '--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE localhost'] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errors = [];
+page.on('pageerror', (e) => errors.push(e.message));
+page.on('console', (m) => ['error', 'warning'].includes(m.type()) && errors.push(m.text()));
+await page.goto('http://localhost:4291/?bot=clumsy');
+await page.waitForFunction(() => window.__ready, null, { timeout: 60000 });
+const until = async (fn, ms = 120000) => { const t = Date.now(); while (Date.now() - t < ms) { if (await page.evaluate(fn)) return true; await page.waitForTimeout(50); } return false; };
+await until(() => __game.hounds.some((h) => h.state === 'windup'));
+await page.screenshot({ path: 'tools/out/desk-windup.png' });
+await page.keyboard.press('KeyL');
+await until(() => __game.hounds.some((h) => h.state === 'circle' || h.state === 'windup'));
+await page.screenshot({ path: 'tools/out/desk-mecha-wave.png' });
+await until(() => __game.foreman.attack === 'sweep' && __game.foreman.beamOn === 2);
+await page.screenshot({ path: 'tools/out/desk-mecha-sweep.png' });
+await page.keyboard.press('KeyL');
+await until(() => __game.markers.length >= 3);
+await page.screenshot({ path: 'tools/out/desk-missiles.png' });
+await until(() => __game.foreman.coreExposed);
+await page.waitForTimeout(700);
+await page.screenshot({ path: 'tools/out/desk-core.png' });
+await until(() => __game.phase === 'won' || __game.phase === 'lost', 200000);
+await page.screenshot({ path: 'tools/out/desk-end.png' });
+console.log(errors.length ? errors.join('\n') : 'no console errors or warnings');
+await browser.close();

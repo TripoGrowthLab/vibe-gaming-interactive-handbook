@@ -1,0 +1,45 @@
+<!doctype html><html><body style="margin:0;background:#fff;font:13px sans-serif"><div id="labels" style="position:fixed;inset:0;pointer-events:none"></div>
+<script type="module">
+// Contact sheet: frames of one clip. Row 1 = raw animation, row 2 = with shoulder push-out fix.
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { prepareModel } from '/src/models.js';
+import { findBones, armAngleAt, ArmFixer } from '/src/skierRig.js';
+const Q = new URLSearchParams(location.search);
+const clipName = Q.get('clip'), n = Number(Q.get('n') ?? 8), from = Number(Q.get('from') ?? 0), to = Q.get('to');
+const view = Q.get('view') ?? 'front', zoom = Number(Q.get('zoom') ?? 1), focusY = Number(Q.get('fy') ?? 0.85);
+const curves = Q.get('curves') ? (await (await fetch(Q.get('curves'))).json()).curves : null;
+const gltf = await new GLTFLoader().loadAsync('/assets/skier.glb');
+const { template } = prepareModel('skier', gltf);
+const clip = gltf.animations.find((c) => c.name.startsWith(clipName));
+const curve = curves?.[clip.name];
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0xeef2f7);
+const W = innerWidth, H = innerHeight;
+const renderer = new THREE.WebGLRenderer({ antialias: true }); renderer.setSize(W, H); document.body.appendChild(renderer.domElement);
+renderer.setScissorTest(true);
+scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+scene.add(new THREE.DirectionalLight(0xffffff, 1.2));
+scene.add(new THREE.GridHelper(4, 16, 0x99a, 0xccd));
+scene.add(template);
+const bones = findBones(template), fixer = new ArmFixer(bones);
+const mixer = new THREE.AnimationMixer(template); mixer.clipAction(clip).play();
+const end = to ? Number(to) : clip.duration - 0.01;
+const dirs = { front: [0, 0.15, 1], back: [0, 0.15, -1], side: [-1, 0.1, 0], q34: [-0.75, 0.25, 0.7], q34r: [0.75, 0.25, 0.7], top: [0, 1, 0.3] };
+const rows = curve ? 2 : 1, cw = W / n, ch = H / rows, labels = document.getElementById('labels');
+for (let r = 0; r < rows; r++) for (let i = 0; i < n; i++) {
+  const t = from + (end - from) * (n === 1 ? 0 : i / (n - 1));
+  fixer.restore(); mixer.setTime(t); template.updateMatrixWorld(true);
+  if (r === 1) fixer.apply(armAngleAt(curve, 'L', t), armAngleAt(curve, 'R', t));
+  template.updateMatrixWorld(true);
+  const cam = new THREE.PerspectiveCamera(28 / zoom, cw / ch, 0.01, 50);
+  const c = new THREE.Vector3(0, focusY, 0);
+  cam.position.copy(c).addScaledVector(new THREE.Vector3(...dirs[view]).normalize(), 4.2);
+  cam.lookAt(c);
+  const x = i * cw, y = H - (r + 1) * ch;
+  renderer.setViewport(x, y, cw, ch); renderer.setScissor(x, y, cw, ch); renderer.render(scene, cam);
+  const l = document.createElement('div'); l.style.cssText = `position:absolute;left:${x + 3}px;top:${r * ch + 2}px`;
+  l.textContent = `${t.toFixed(2)}s ${r ? 'fixed' : 'raw'}`; labels.appendChild(l);
+}
+window.__result = { clip: clip.name };
+</script></body></html>

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env*
+!.env*.tpl
+.DS_Store
+# Generated 3D models are not committed; each example's README says where yours go
+*.glb
+*.gltf

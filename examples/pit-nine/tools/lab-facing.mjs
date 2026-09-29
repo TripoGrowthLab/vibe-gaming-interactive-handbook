@@ -1,0 +1,47 @@
+// Final facing check: each model as the game builds it (left) next to its placeholder (right), red arrow = +Z.
+import { chromium } from 'playwright-core';
+const style = process.argv[2] || 'arcade';
+const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport: { width: 1600, height: 820 } });
+page.on('pageerror', (e) => console.log('pageerror', e.message));
+await page.goto('http://localhost:5199/lab.html');
+await page.waitForFunction(() => window.lab?.ready);
+const out = await page.evaluate(async (style) => {
+  const { THREE, scene, renderer } = lab;
+  await lab.models.loadStyle(style);
+  const ids = ['player', 'blaster', 'hound', 'foreman', 'crate', 'wall', 'repair_kit', 'missile'];
+  const W = innerWidth, H = innerHeight, cols = 4, rows = 2;
+  const w = W / cols, h = H / rows;
+  renderer.setScissorTest(true);
+  const labels = document.getElementById('labels');
+  labels.innerHTML = '';
+  const res = {};
+  ids.forEach((id, i) => {
+    lab.clear();
+    const m = lab.models.modelView(id, style).root;
+    const p = lab.createView(id).root;
+    const mb = new THREE.Box3().setFromObject(m);
+    const size = Math.max(...mb.getSize(new THREE.Vector3()).toArray());
+    m.position.x = -size * 0.6;
+    p.position.x = size * 0.6;
+    const ar = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), new THREE.Vector3(0, 0.01, 0), size, 0xff0000, size * 0.2, size * 0.1);
+    scene.add(m, p, ar);
+    const cam = new THREE.PerspectiveCamera(32, w / h, 0.01, 200);
+    cam.position.set(size * 0.9, size * 1.1, size * 2.4);
+    cam.lookAt(0, size * 0.3, 0);
+    const x = (i % cols) * w, y = H - (Math.floor(i / cols) + 1) * h;
+    renderer.setViewport(x, y, w, h);
+    renderer.setScissor(x, y, w, h);
+    renderer.render(scene, cam);
+    const d = document.createElement('div');
+    d.style.left = `${x + 4}px`; d.style.top = `${H - y - h + 4}px`;
+    d.textContent = `${id}: model | placeholder (red = +Z)`;
+    labels.appendChild(d);
+    res[id] = mb.getSize(new THREE.Vector3()).toArray().map((v) => +v.toFixed(2));
+  });
+  renderer.setScissorTest(false);
+  return res;
+}, style);
+await page.screenshot({ path: `tools/out/facing-${style}.png` });
+console.log(JSON.stringify(out));
+await browser.close();

@@ -1,0 +1,5 @@
+node_modules/
+dist/
+tools/shots/
+tools/lab/out/
+.DS_Store

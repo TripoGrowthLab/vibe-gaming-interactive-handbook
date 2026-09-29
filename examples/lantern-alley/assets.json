@@ -1,0 +1,192 @@
+{
+  "style_sentence": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows.",
+  "notes": [
+    "Every prompt starts with the same style sentence. Thick black outlines and toon shading are added in code (as in the greybox), not painted into the textures, so they stay crisp at every size and angle.",
+    "floor and wall are built in code and are not in this list.",
+    "size_m is the height for characters and the longest edge for everything else.",
+    "Flick (thug_kicker) and Crusher (thug_crusher) now have their own models. Until their files are in public/assets, the game shows them as recoloured copies of the Sprat and Slab models. This takes the list to 10 entries (the original limit was 8)."
+  ],
+  "assets": [
+    {
+      "id": "hero",
+      "name": "Volt",
+      "type": "character",
+      "size_m": 1.8,
+      "triangle_budget": 12000,
+      "file": "public/assets/hero.glb",
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "box_01",
+        "box_02",
+        "box_03",
+        "front_kick_01",
+        "hit_to_body",
+        "hit_to_head",
+        "defeat",
+        "cheer"
+      ],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. Full body of Volt, an athletic adult street hero, about 7 heads tall with broad shoulders about a quarter of the body height wide, standing in a T-pose with arms straight out to the sides at shoulder height, open hands with fingers together, legs straight and slightly apart, facing the camera. Short spiky black hair, a yellow domino eye mask, a short electric-blue bomber jacket with a big yellow lightning-bolt emblem on the chest, dark fingerless gloves, dark navy cargo trousers tucked into chunky red sneakers. Close-fitting clothes, no cape, no loose straps, no weapon, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "thug_skinny",
+      "name": "Sprat (used by every Sprat)",
+      "type": "character",
+      "size_m": 1.75,
+      "triangle_budget": 8000,
+      "file": "public/assets/thug_skinny.glb",
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "box_01",
+        "box_02",
+        "hit_to_body",
+        "hit_to_head",
+        "defeat",
+        "cheer"
+      ],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. Full body of Sprat, a lanky wiry street-gang thug, very thin with narrow shoulders about a fifth of the body height wide, long thin arms and legs, a small head with a sharp chin, standing in a T-pose with arms straight out to the sides at shoulder height, open hands with fingers together, legs straight and slightly apart, facing the camera. Rust-orange bandana tied over the head, purple tank top with a round rust-orange dog-head gang patch on the chest, ripped light-blue jeans, scuffed white sneakers. Close-fitting clothes, no loose straps, no weapon, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "thug_kicker",
+      "name": "Flick",
+      "type": "character",
+      "size_m": 1.82,
+      "triangle_budget": 8000,
+      "file": "public/assets/thug_kicker.glb",
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "box_01",
+        "front_kick_01",
+        "hit_to_body",
+        "hit_to_head",
+        "defeat",
+        "cheer"
+      ],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. Full body of Flick, a wiry female street-gang kickboxer, tall and lean with long legs about half of the body height, narrow shoulders about a fifth of the body height wide, a high black ponytail, standing in a T-pose with arms straight out to the sides at shoulder height, open hands with fingers together, legs straight and slightly apart, facing the camera. Teal cropped sports top with a round rust-orange dog-head gang patch, black fitted cargo trousers, white hand wraps, bright yellow high-top sneakers. Close-fitting clothes, no loose straps, no weapon, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "thug_fat",
+      "name": "Slab (used by every Slab)",
+      "type": "character",
+      "size_m": 1.7,
+      "triangle_budget": 8000,
+      "file": "public/assets/thug_fat.glb",
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "box_03",
+        "slash",
+        "hit_to_body",
+        "hit_to_head",
+        "defeat"
+      ],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. Full body of Slab, a short heavy street-gang bruiser with a big round belly, the body about 60 percent as wide as it is tall, thick heavy arms, short sturdy legs, a shaved head sitting low on a thick neck, standing in a T-pose with arms straight out to the sides at shoulder height, open hands with fingers together, legs straight and apart, facing the camera. Olive-green sleeveless vest over a white undershirt, round rust-orange dog-head gang patch on the vest, brown work trousers, heavy black boots. Close-fitting clothes, no loose straps, no weapon, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "thug_crusher",
+      "name": "Crusher",
+      "type": "character",
+      "size_m": 1.85,
+      "triangle_budget": 8000,
+      "file": "public/assets/thug_crusher.glb",
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "box_02",
+        "box_03",
+        "front_kick_01",
+        "hit_to_body",
+        "hit_to_head",
+        "defeat",
+        "cheer"
+      ],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. Full body of Crusher, a heavyweight street-gang boxer, tall and massive with a broad V-shaped chest and shoulders about 55 percent of the body height wide, thick muscular arms, a square jaw, a short dark beard and a flat-top haircut, standing in a T-pose with arms straight out to the sides at shoulder height, open hands with red hand wraps and fingers together, legs straight and apart, facing the camera. Sleeveless dark-red hoodie vest with a large rust-orange dog-head emblem, grey sweatpants, black boxing boots. Close-fitting clothes, no hood up, no loose straps, no weapon, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "boss",
+      "name": "Big Anvil",
+      "type": "character",
+      "size_m": 2.3,
+      "triangle_budget": 12000,
+      "file": "public/assets/boss.glb",
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "box_03",
+        "front_kick_01",
+        "slash",
+        "hit_to_body",
+        "hit_to_head",
+        "defeat",
+        "cheer"
+      ],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. Full body of Big Anvil, a giant muscular gang boss, very tall with a huge barrel chest and shoulders about half of the body height wide, massive arms, a small bald head on a thick neck, a grey horseshoe moustache, standing in a T-pose with arms straight out to the sides at shoulder height, open hands with fingers together, legs straight and apart, facing the camera. Sleeveless dark-red leather vest with a large rust-orange dog-head emblem, wide iron-grey belt with a square buckle, black trousers, steel-capped brown boots. Close-fitting clothes, no coat tails, no loose chains, no weapon, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "dumpster",
+      "name": "Dumpster",
+      "type": "prop",
+      "size_m": 2.0,
+      "triangle_budget": 1500,
+      "file": "public/assets/dumpster.glb",
+      "animations": [],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. A green metal alley dumpster shaped like a wide box, twice as wide as it is deep and a little more than half as tall as it is wide, with a closed dark-green lid hinged at the back, a thick rim, and a yellow warning label on the front side, front side facing the camera, seen from slightly above at a three-quarter angle, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "crate",
+      "name": "Wooden crate",
+      "type": "prop",
+      "size_m": 1.0,
+      "triangle_budget": 600,
+      "file": "public/assets/crate.glb",
+      "animations": [],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. A wooden shipping crate shaped as a perfect cube, equal width, height and depth, made of wide light-orange planks with a darker brown frame around every edge and one diagonal brace across the front face, front face towards the camera, seen from slightly above at a three-quarter angle, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "trash_can",
+      "name": "Metal trash can",
+      "type": "prop",
+      "size_m": 0.9,
+      "triangle_budget": 1000,
+      "file": "public/assets/trash_can.glb",
+      "animations": [],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. A round galvanised metal trash can, a cylinder about 1.6 times as tall as it is wide, with three raised ribs around the sides, two small side handles, and a slightly wider domed lid with a handle on top, light blue-grey metal, front towards the camera, seen from slightly above, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "street_lamp",
+      "name": "Street lamp",
+      "type": "prop",
+      "size_m": 3.5,
+      "triangle_budget": 1500,
+      "file": "public/assets/street_lamp.glb",
+      "animations": [],
+      "prompt": "Stylized comic-book 3D game model with a cel-shaded look: flat bright saturated colours in clean hard-edged areas, bold simple shapes, no gradients, no fine texture detail, even front lighting with no cast shadows. An old-fashioned city street lamp: one tall thin dark-iron post with a heavy round base, the post about twelve times taller than it is wide, and at the top a curved arm reaching out to one side about a quarter of the post height, with a hanging lantern with warm yellow glass panels at its end, seen from the side, single isolated object, centered, on a plain white background"
+    }
+  ],
+  "busiest_moment": {
+    "when": "Wave 3: Volt, and 4 of Sprat, Flick, Slab and Crusher on screen (usually one of each), plus all props (1 dumpster, 3 crates, 2 trash cans, 2 street lamps).",
+    "triangles": {
+      "characters": "12000 + 4 x 8000 = 44000",
+      "props": "1500 + 3 x 600 + 2 x 1000 + 2 x 1500 = 8300",
+      "floor_and_wall": "about 100",
+      "models_total": 52400,
+      "with_comic_outline_pass": 104800,
+      "note": "The black outline draws each mesh a second time, so the triangle count doubles."
+    },
+    "texture_memory": {
+      "unique_models_on_screen": 9,
+      "as_exported_2k": "9 base-colour maps x 22 MB = about 202 MB (about 605 MB if Tripo also exports normal and metal/roughness maps).",
+      "planned_at_load": "Only the base colour is used, shrunk to 1024 for characters (5 x 5.6 MB) and 512 for props (4 x 1.4 MB) = about 34 MB. The 2k originals stay untouched in public/assets.",
+      "planned_total_mb": 34
+    },
+    "phone_verdict": "Yes. Triangles are unchanged (about 105k with the outline pass). Texture memory after shrinking goes from about 22 MB to about 34 MB, still safe for phones. Unshrunk 2k maps (about 202-605 MB) would not be."
+  }
+}

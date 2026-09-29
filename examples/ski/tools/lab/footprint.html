@@ -1,0 +1,19 @@
+<!doctype html><html><body><script type="module">
+// Real model footprint at skier height (y < 1.7 m) vs gameplay hitboxes, in world axes (after gameplay yaw).
+import * as THREE from 'three';
+import { loadModels } from '/src/models.js';
+import { OBJECTS } from '/src/defs.js';
+const { models } = await loadModels('/assets/');
+const out = {};
+const v = new THREE.Vector3();
+for (const id of ['pine_tree', 'boulder', 'log', 'snowman', 'lift_pylon', 'edge_fence', 'skis', 'skier']) {
+  const g = new THREE.Group(); g.add(models[id].template.clone()); g.rotation.y = OBJECTS[id].yaw ?? 0; g.updateMatrixWorld(true);
+  let r = 0, minX = 1e9, maxX = -1e9, minZ = 1e9, maxZ = -1e9, n = 0; const box = new THREE.Box3();
+  g.traverse((o) => { if (!o.isMesh) return; const p = o.geometry.attributes.position;
+    for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).applyMatrix4(o.matrixWorld); box.expandByPoint(v); if (v.y > 1.7 && id !== 'skier') continue; n++;
+      r = Math.max(r, Math.hypot(v.x, v.z)); minX = Math.min(minX, v.x); maxX = Math.max(maxX, v.x); minZ = Math.min(minZ, v.z); maxZ = Math.max(maxZ, v.z); } });
+  const s = box.getSize(new THREE.Vector3());
+  out[id] = { fullSize: s.toArray().map((x) => +x.toFixed(2)), below17: { radius: +r.toFixed(2), w: +(maxX - minX).toFixed(2), d: +(maxZ - minZ).toFixed(2) }, hitbox: OBJECTS[id].hitbox ?? null, gddSize: OBJECTS[id].size };
+}
+window.__result = out;
+</script></body></html>

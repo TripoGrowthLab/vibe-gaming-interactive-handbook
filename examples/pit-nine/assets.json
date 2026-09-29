@@ -1,0 +1,137 @@
+{
+  "game": "Pit Nine",
+  "artStyle": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading.",
+  "notes": [
+    "Sizes are in metres: height for people, longest edge for everything else.",
+    "Everything that only glows, spins, bobs or flashes stays in code: bolts, cannon shells, sweep beam, warning circles, stomp ring, blasts, the Foreman's glowing core and the arena floor.",
+    "Every entry has a second look (style 'Mecha Pop') for the Look button; it is exported as <id>_mecha_pop.glb."
+  ],
+  "entries": [
+    {
+      "id": "player",
+      "name": "Tamsin Holt",
+      "kind": "person",
+      "size_m": 1.7,
+      "triangles": 10000,
+      "file": "player.glb",
+      "style": "Mecha Pop",
+      "animations": [
+        "idle",
+        "run",
+        "shoot",
+        "hit_to_body_01",
+        "defeat_02",
+        "cheer",
+        "roll: a small character dives forward into a quick shoulder roll and springs back up into a low crouch"
+      ],
+      "animation_use": {
+        "idle": "idle",
+        "run": "run (legs; the upper body can play shoot on top)",
+        "shoot": "upper body only, sped up to 6 shots a second",
+        "hurt": "hit_to_body_01",
+        "knocked_down": "defeat_02 (being knocked down)",
+        "cheer": "cheer",
+        "roll": "roll (Text to Motion)"
+      },
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A young woman scrapyard scavenger standing in a T-pose, facing the camera, arms straight out to the sides with open hands, legs straight and slightly apart. Adult proportions, 1.7 metres tall: the head is about one sixth of her height, the arms are long enough to reach mid-thigh when lowered, the body is no wider than the shoulders, with clear space between the arms and the body and between the two legs. She wears a snug patched teal work jumpsuit with the sleeves rolled tight to the elbow, a fitted rust-orange padded vest, a narrow belt with small flat pouches, knee pads, chunky brown work boots and fingerless gloves. Short cropped dark-brown hair close to the head, round welding goggles pushed up flat on the forehead, a smudge of oil on one cheek. Nothing loose or hanging: no scarf, no cape, no long hair, no straps or tails, and nothing held in the hands, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "blaster",
+      "name": "Tamsin's scrap blaster",
+      "kind": "prop",
+      "size_m": 0.6,
+      "triangles": 1500,
+      "file": "blaster.glb",
+      "style": "Mecha Pop",
+      "attach": "held in Tamsin's right hand (attached to the hand bone in code), barrel along +Z",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A chunky two-handed scrap-built energy blaster seen from the side, 0.6 metres long, about four times longer than it is tall and only a little wider than a hand: a short thick barrel with a glowing teal muzzle ring at the front, a boxy body made from a riveted rusty tin can, a small copper coil on top, a grip underneath and a short stubby stock at the back. Weathered orange and gunmetal paint with scratched edges, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "hound",
+      "name": "Scrapling (robot hound)",
+      "kind": "parts",
+      "size_m": 1.4,
+      "triangles": 5000,
+      "file": "hound.glb",
+      "style": "Mecha Pop",
+      "parts": ["body", "head", "front_left_leg", "front_right_leg", "back_left_leg", "back_right_leg"],
+      "hinges": "head at the neck, each leg at its top where it meets the body; all moved in code",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A small four-legged robot hound built from mismatched scrap, seen in a three-quarter front view, standing square with all four legs straight down and spread apart. 1.4 metres long from nose to tail, 0.8 metres tall and 0.6 metres wide; the body is a short horizontal oil drum, about twice as long as it is tall. It is made of six separate, clearly outlined pieces with a visible gap between each one, each piece its own colour, none overlapping another: a rust-orange barrel body with a stubby exhaust-pipe tail; a teal boxy head like a bench vise with a square jaw and two small round yellow lamp eyes, sitting just in front of the body with a gap for the neck; a mustard-yellow front left leg, an olive-green front right leg, a brown back left leg and a dark-grey back right leg, each leg a straight piston with a flat square foot, attached under the body with a visible gap at the top, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "foreman",
+      "name": "The Foreman",
+      "kind": "parts",
+      "size_m": 7.6,
+      "triangles": 30000,
+      "file": "foreman.glb",
+      "style": "Mecha Pop",
+      "parts": ["hull", "left_cannon", "right_cannon", "missile_pod", "armour_plate", "front_left_leg", "front_right_leg", "back_left_leg", "back_right_leg"],
+      "hinges": "cannons at their shoulder mounts, missile pod at the back edge of the roof, armour plate along its top edge, legs at the hips; all moved in code. The glowing core is made in code and sits in a round socket on the hull front.",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A giant four-legged walking forge machine seen in a three-quarter front view, 7.6 metres wide, 7.5 metres tall and 5 metres deep: a boxy furnace-like hull sits high on four thick straight legs, and the legs take up the lower half of its height. It is made of nine separate, clearly outlined pieces with a visible gap or seam between each one, each piece its own colour, none overlapping another: a rust-brown hull shaped like a big square furnace with a short chimney and a round empty socket in the middle of its front; a teal left cannon and a slate-blue right cannon, each a thick square shoulder block with a long straight barrel pointing forward, mounted on either side of the hull; a red missile pod, a square box with a grid of round holes, on the back of the roof; a mustard-yellow armour plate, a flat rectangular shield hanging from two small hinges on the front of the hull, below the socket, with a gap between it and the hull; and four straight piston legs with flat square feet, one at each corner: dark-grey front left leg, charcoal front right leg, olive-grey back left leg and umber back right leg, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "crate",
+      "name": "Stack of scrap crates",
+      "kind": "prop",
+      "size_m": 1.5,
+      "triangles": 1500,
+      "file": "crate.glb",
+      "style": "Mecha Pop",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A small stack of two old metal-banded wooden cargo crates, 1.5 metres wide, 1.5 metres deep and 1.5 metres tall: a big square crate at the bottom, about two thirds as tall as it is wide, with a smaller crate sitting on top of it slightly off-centre. Square footprint, flat bottom, straight vertical sides, dark metal corner brackets, a faded stencilled number on the front, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "wall",
+      "name": "Scrap wall segment",
+      "kind": "prop",
+      "size_m": 6.3,
+      "triangles": 2000,
+      "file": "wall.glb",
+      "style": "Mecha Pop",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A long straight low wall made of stacked scrapyard junk, seen from the front, 6.3 metres long, 2.5 metres tall and 1 metre thick, about two and a half times longer than it is tall: flattened car doors, corrugated metal sheets, a couple of worn tyres and a rusty steel girder packed tightly into a solid block, with a flat front face, a flat top edge and both ends cut straight and square so several can stand side by side, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "repair_kit",
+      "name": "Repair kit",
+      "kind": "prop",
+      "size_m": 0.5,
+      "triangles": 1000,
+      "file": "repair_kit.glb",
+      "style": "Mecha Pop",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A small green metal toolbox repair kit, 0.5 metres long, 0.35 metres tall and 0.35 metres deep, with a chunky carry handle on top, two latches on the front and a big white cross painted on the side, single isolated object, centered, on a plain white background"
+    },
+    {
+      "id": "missile",
+      "name": "Foreman missile",
+      "kind": "prop",
+      "size_m": 1.0,
+      "triangles": 1000,
+      "file": "missile.glb",
+      "style": "Mecha Pop",
+      "prompt": "Chunky hand-painted low-poly 3D game asset in the style of a 1990s arcade game, with bold simple shapes, flat hand-painted colours and soft painted shading. A short stubby cartoon missile lying on its side, 1 metre long and 0.3 metres thick, about three times longer than it is thick: a rounded red nose cone, a dented white body with a rusty red stripe, and four small square tail fins, single isolated object, centered, on a plain white background"
+    }
+  ],
+  "busiestMoment": {
+    "when": "Wave 2: Tamsin, 4 hounds, the sleeping Foreman, 6 crate stacks, all 20 wall segments and up to 3 repair kits (the boss fight has no hounds, so it is lighter)",
+    "triangles": {
+      "player + blaster": 11500,
+      "hounds (4 x 5000)": 20000,
+      "foreman": 30000,
+      "crates (6 x 1500)": 9000,
+      "walls (20 x 2000)": 40000,
+      "repair kits (3 x 1000)": 3000,
+      "code effects and floor (about)": 2000,
+      "total": 115500,
+      "drawn per frame including the shadow pass (about)": 230000
+    },
+    "textureMemory": {
+      "assumption": "each GLB has a base-colour, a normal and a metal/roughness map; one map with mipmaps takes about 22 MB at 2K, 5.6 MB at 1K and 1.4 MB at 512. All hounds share one texture set, so do all walls, crates and so on.",
+      "as exported, 2K, one look": "8 models x 3 maps x 22 MB = about 540 MB",
+      "as exported, both looks loaded": "about 1080 MB",
+      "plan": "Keep only the active look in memory (the other loads when you press Look). Shrink textures when loading: desktop keeps 2K for Tamsin and the Foreman and uses 1K for the rest; phones use 1K for Tamsin and the Foreman and 512 for the rest.",
+      "desktop with the plan": "about 235 MB",
+      "phone with the plan": "about 60 MB"
+    },
+    "phoneVerdict": "Yes. About 115,000 triangles is well within what a phone from the last five years draws at 60 frames a second, and with the texture plan the textures need about 60 MB. Without the plan (full 2K, both looks) textures alone would need about 1 GB, which most phones cannot handle. Real numbers will be measured from the actual files in stage 5, especially how many textures the split models bring."
+  }
+}

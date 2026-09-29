@@ -1,0 +1,8 @@
+<!doctype html><html><body><script type="module">
+import { loadModels } from '/src/models.js';
+const { models } = await loadModels('/assets/');
+const tpl = models.pine_tree.template; tpl.updateMatrixWorld(true);
+const prof = new Array(50).fill(0), v = tpl.position.clone();
+tpl.traverse((o) => { if (!o.isMesh) return; const p = o.geometry.attributes.position; for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).applyMatrix4(o.matrixWorld); const b = Math.min(49, Math.floor(v.y * 10)); prof[b] = Math.max(prof[b], Math.hypot(v.x, v.z)); } });
+window.__result = prof.map((r, i) => `${(i / 10).toFixed(1)}m:${r.toFixed(2)}`).join(' ');
+</script></body></html>

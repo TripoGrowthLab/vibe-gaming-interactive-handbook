@@ -1,0 +1,42 @@
+# Every example must install and build without models, and no model file,
+# env file, internal address or email address may be committed.
+name: check
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: README prompt matches prompt/vibe-gaming.md
+        run: node scripts/sync-prompt.mjs --check
+      - name: No models, env files, internal domains or emails in tracked files
+        run: |
+          fail=0
+          if git ls-files | grep -iE '\.(glb|gltf|fbx|obj|usdz)$'; then echo "::error::model files are tracked"; fail=1; fi
+          if git ls-files | grep -E '(^|/)\.env' | grep -vE '\.tpl$'; then echo "::error::.env files are tracked"; fail=1; fi
+          if git grep -nIiE 'devops\.tripo3d\.ai|feishu\.cn|larksuite\.com|larkoffice\.com' -- . ':!.github/workflows/check.yml'; then echo "::error::internal domain found"; fail=1; fi
+          if git grep -nIE '[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}' -- . ':!**/package-lock.json' ':!.github/workflows/check.yml' | grep -vE '@(example\.com|users\.noreply\.github\.com)'; then echo "::error::email address found"; fail=1; fi
+          exit $fail
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example: [ski, lantern-alley, pit-nine, toy-box-bout]
+    defaults:
+      run:
+        working-directory: examples/${{ matrix.example }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build

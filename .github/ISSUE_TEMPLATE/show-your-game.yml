@@ -1,0 +1,36 @@
+name: Show your game
+description: Share a game you made with the prompt.
+title: "[Game] "
+labels: ["show-your-game"]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Where can people play it or watch it? (hosted game, video, post)
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: What is it?
+      description: One or two sentences, plus a screenshot or GIF if you have one.
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and model
+      placeholder: "Claude Code, claude-opus-5-5"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Prompt version
+      placeholder: "1.0"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything that surprised you
+      description: Where the agent shone, where it got stuck, what you had to tell it.

@@ -1,0 +1,56 @@
+// Dev-only viewer: raw GLB (scaled only) next to its greybox placeholder, from a chosen camera.
+// ?id=robot_pipo&view=front|back|side|top|threequarter
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import '/src/visuals/placeholders.js';
+import { build } from '/src/visuals/registry.js';
+import { createRobotView } from '/src/visuals/robotView.js';
+import { stockLoadout } from '/src/data.js';
+
+const q = new URLSearchParams(location.search);
+const id = q.get('id') || 'robot_pipo';
+const view = q.get('view') || 'front';
+const SIZE = { arena_toybox: 5.1, toy_block: 0.25, cork_pellet: 0.04, bottle_rocket: 0.14 };
+const r = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+r.setSize(innerWidth, innerHeight);
+document.body.append(r.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xdfe3ea);
+scene.environment = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
+scene.add(new THREE.DirectionalLight(0xffffff, 1.5).translateZ(3).translateY(3));
+// axes: red = +X, green = +Y, blue = +Z
+const gltf = await new GLTFLoader().loadAsync(`/assets/${id}.glb`);
+const model = gltf.scene;
+const box = new THREE.Box3().setFromObject(model);
+const size = box.getSize(new THREE.Vector3());
+const isRobot = id.startsWith('robot_');
+const target = isRobot ? 0.5 : SIZE[id];
+const k = target / (isRobot ? size.y : Math.max(size.x, size.y, size.z));
+model.scale.setScalar(k);
+const b2 = new THREE.Box3().setFromObject(model);
+const c = b2.getCenter(new THREE.Vector3());
+model.position.set(-c.x, -b2.min.y, -c.z);
+const holder = new THREE.Group();
+holder.add(model);
+scene.add(holder);
+let ph;
+if (isRobot) ph = createRobotView(stockLoadout(id.replace('robot_', ''))).root;
+else ph = build(id === 'arena_toybox' ? 'arena_toybox' : id);
+const gap = target * 1.3;
+holder.position.x = -gap / 2;
+ph.position.x = gap / 2;
+scene.add(ph);
+const axes = new THREE.AxesHelper(target * 0.6);
+axes.position.set(0, 0.001, 0);
+scene.add(axes);
+const d = target * 2.6;
+const cam = new THREE.PerspectiveCamera(35, innerWidth / innerHeight, target / 100, target * 100);
+const look = new THREE.Vector3(0, target * 0.45, 0);
+if (id === 'arena_toybox' || id === 'cork_pellet' || id === 'bottle_rocket') look.y = target * 0.1;
+const pos = { front: [0, 0.5, 1], back: [0, 0.5, -1], side: [1, 0.4, 0], top: [0, 1, 0.01], threequarter: [0.8, 0.6, 1] }[view];
+cam.position.set(pos[0] * d, look.y + pos[1] * d * 0.5, pos[2] * d);
+if (view === 'top') cam.position.set(0, d * 1.2, 0.001);
+cam.lookAt(look);
+r.render(scene, cam);
+window.__done = true;

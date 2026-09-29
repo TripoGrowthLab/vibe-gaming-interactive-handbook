@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #bfe3ff; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #16324f; user-select: none; -webkit-user-select: none;
+  -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+  touch-action: none; overscroll-behavior: none;
+}
+#app, #app canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+
+#hud {
+  position: fixed; left: 0; right: 0; top: 0; pointer-events: none;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: calc(10px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) 0 calc(14px + env(safe-area-inset-left));
+}
+#hud-dist { font-size: 34px; font-weight: 800; text-shadow: 0 2px 0 #fff8; }
+#hud-sub { font-size: 14px; font-weight: 600; opacity: .8; }
+.icon-btn {
+  pointer-events: auto; width: 48px; height: 48px; border-radius: 12px; border: 0;
+  background: #ffffffcc; color: #16324f; font-size: 18px; font-weight: 800; cursor: pointer;
+}
+#toast {
+  position: fixed; top: 22%; left: 50%; transform: translateX(-50%);
+  background: #ffcf33; color: #5a3500; font-weight: 800; font-size: 22px;
+  padding: 8px 18px; border-radius: 999px; pointer-events: none; transition: opacity .3s;
+}
+.screen {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: #bfe3ff55; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+}
+.card {
+  background: #ffffffee; border-radius: 22px; padding: 26px 30px; text-align: center;
+  box-shadow: 0 10px 30px #0b2a4a33; max-width: min(90vw, 420px);
+}
+h1 { margin: 0 0 4px; font-size: 38px; letter-spacing: .5px; color: #c2410c; }
+h2 { margin: 0 0 6px; font-size: 30px; }
+.tag { margin: 0 0 18px; opacity: .75; }
+.result { font-size: 44px; font-weight: 800; margin: 4px 0; }
+.newbest { color: #c2410c; font-weight: 800; font-size: 20px; margin: 0 0 6px; }
+.hint { font-size: 14px; opacity: .75; margin: 10px 0 0; }
+.big-btn {
+  font: inherit; font-size: 22px; font-weight: 800; padding: 14px 44px; border: 0; border-radius: 14px;
+  background: #f97316; color: #fff; cursor: pointer; box-shadow: 0 4px 0 #c2410c; margin-top: 6px;
+}
+.big-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #c2410c; }
+.hidden { display: none !important; }
+body.touch .only-desktop { display: none; }
+body:not(.touch) .only-touch { display: none; }
+
+.look-btn {
+  position: fixed; z-index: 5; width: auto; height: 36px; padding: 0 12px; font-size: 13px;
+  left: calc(10px + env(safe-area-inset-left)); bottom: calc(10px + env(safe-area-inset-bottom));
+}
+
+/* "Made with Tripo": a small corner link, shown on the title / pause / game-over screens only,
+   so it never covers the run or catches a steering thumb. */
+#made-with {
+  position: fixed; z-index: 6; right: calc(10px + env(safe-area-inset-right)); bottom: calc(10px + env(safe-area-inset-bottom));
+  padding: 7px 11px; border-radius: 999px; background: #ffffffcc; color: #16324f;
+  font-size: 12px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 8px #0b2a4a22;
+}
+#made-with:hover { background: #fff; }
+body[data-mode="play"] #made-with { display: none; }

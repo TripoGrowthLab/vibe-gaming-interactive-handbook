@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#bfe3ff" />
+  <title>Snowdrift Dash</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9B%B7%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="hud">
+    <div id="hud-left">
+      <div id="hud-dist">0 m</div>
+      <div id="hud-sub"><span id="hud-speed">0 km/h</span> · best <span id="hud-best">0 m</span></div>
+    </div>
+    <button id="btn-pause" class="icon-btn" aria-label="Pause">❚❚</button>
+  </div>
+  <div id="toast" class="hidden">New best!</div>
+  <a id="made-with" href="https://studio.tripo3d.ai/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=example_ski_game" target="_blank" rel="noopener">Made with Tripo</a>
+  <button id="btn-look" class="icon-btn look-btn" title="Switch between 3D models and greybox (M)">Loading…</button>
+
+  <div id="screen-title" class="screen">
+    <div class="card">
+      <h1>Snowdrift Dash</h1>
+      <p class="tag">Juno Vale vs. the back slope of Mt. Hollowpine</p>
+      <button id="btn-start" class="big-btn">Start</button>
+      <p class="hint only-desktop">Steer: ← → or A / D · Pause: P / Esc · Start: Space</p>
+      <p class="hint only-touch">Hold the left or right half of the screen to steer</p>
+      <p class="hint">Best: <span id="title-best">0 m</span></p>
+    </div>
+  </div>
+
+  <div id="screen-over" class="screen hidden">
+    <div class="card">
+      <h2>Wipeout!</h2>
+      <p class="result"><span id="over-dist">0 m</span></p>
+      <p id="over-newbest" class="newbest hidden">New best!</p>
+      <p class="hint">Best: <span id="over-best">0 m</span></p>
+      <button id="btn-retry" class="big-btn">Retry</button>
+      <p class="hint only-desktop">Space / Enter to retry</p>
+    </div>
+  </div>
+
+  <div id="screen-pause" class="screen hidden">
+    <div class="card">
+      <h2>Paused</h2>
+      <button id="btn-resume" class="big-btn">Resume</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Lantern Alley</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👊</text></svg>" />
+</head>
+<body>
+  <div id="app"></div>
+  <div id="hud">
+    <div id="hp"><span>VOLT</span><div class="bar"><div id="hp-fill"></div></div></div>
+    <div id="wave">WAVE 1/4</div>
+    <div id="boss-bar" hidden><span>BIG ANVIL</span><div class="bar"><div id="boss-fill"></div></div></div>
+  </div>
+  <button id="look" disabled>LOADING…</button>
+  <div id="combo"></div>
+  <div id="banner"></div>
+  <div id="end" hidden>
+    <div id="end-title"></div>
+    <div id="end-hint">Tap, or press Enter, to play again</div>
+  </div>
+  <div id="touch">
+    <div id="stick"><div id="knob"></div></div>
+    <div id="buttons">
+      <div id="btn-kick" class="btn">KICK</div>
+      <div id="btn-punch" class="btn">PUNCH</div>
+    </div>
+  </div>
+  <a id="made-with" href="https://studio.tripo3d.ai/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=example_lantern_alley_game" target="_blank" rel="noopener">Made with Tripo</a>
+  <div id="help">Move: WASD / arrows &nbsp; Run: hold Shift &nbsp; Punch: J (press again for a combo) &nbsp; Kick: K</div>
+  <div id="rotate">Turn your phone sideways for a wider view</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html><html><body style="margin:0;background:#fff"><script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const ids = ['skier','skis','pine_tree','boulder','log','snowman','lift_pylon','edge_fence'];
+const loader = new GLTFLoader();
+const out = {};
+for (const id of ids) {
+  try {
+    const g = await loader.loadAsync(`/assets/${id}.glb`);
+    g.scene.updateMatrixWorld(true);
+    const box = new THREE.Box3().setFromObject(g.scene, true);
+    const s = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+    const meshes = []; g.scene.traverse(o => { if (o.isMesh) meshes.push({ name: o.name, skinned: !!o.isSkinnedMesh, verts: o.geometry.attributes.position.count, map: o.material.map ? [o.material.map.image.width, o.material.map.image.height] : null }); });
+    out[id] = { size: s.toArray().map(v => +v.toFixed(3)), center: c.toArray().map(v => +v.toFixed(3)), minY: +box.min.y.toFixed(3), meshes, anims: g.animations.map(a => [a.name, +a.duration.toFixed(2), a.tracks.length]) };
+  } catch (e) { out[id] = { error: String(e) }; }
+}
+window.__result = out;
+</script></body></html>

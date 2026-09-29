@@ -1,0 +1,254 @@
+{
+  "artStyle": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting.",
+  "notes": [
+    "No person entries: every robot is built from parts moved in code (no bones, no Tripo animations).",
+    "Robot part names map to the game's slots: head -> head, core -> core, right_arm -> arm_r, left_arm -> arm_l, hips + legs/treads/skirt -> legs.",
+    "'right' and 'left' always mean the robot's own right and left. In a front view the robot's right arm is on the viewer's left.",
+    "hit_spark and part_debris are effects made in code and have no entry.",
+    "The four robots were made in Tripo Studio with these settings: image first, then HD Model -> H3.1 -> Generate in Parts (Simple), Ultra mesh quality, 30000 triangles; AI Completion to fill the parts; 4K texture plus PBR; the Mecha Pop and Wood styles are 4K plus PBR too. Export GLB with Pack UV off. The finished robots have about 41-43k triangles each."
+  ],
+  "entries": [
+    {
+      "id": "robot_pipo",
+      "file": "robot_pipo.glb",
+      "kind": "parts",
+      "size_m": 0.5,
+      "size_note": "height 0.50 m (longest edge); 0.34 m wide, 0.20 m deep",
+      "triangles": 10000,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. A small friendly toy battle robot standing straight and facing the viewer, about one and a half times as tall as it is wide. A boxy blue head, about a quarter of the total height, with two round yellow eyes on the front and one thin antenna ending in a small bell. A white box-shaped chest, as wide as the shoulders, with a round yellow chest light. The arms hang straight down at the sides, attached at round shoulder joints and slightly apart from the body, and end at mid-thigh: the robot's own right arm (on the viewer's left) is red and ends in a chunky square fist on a short coil spring; the robot's own left arm (on the viewer's right) is yellow and shaped like a short cork-gun barrel pointing down. A dark grey hip block, then two separate straight blue legs with flat white feet, standing slightly apart; the legs are about two fifths of the total height. The head, chest, each arm, the hips and each leg are separate pieces, each in its own single main colour; each piece fits snugly against the next with a crisp panel seam, no empty gaps. Fine toy details: engraved panel lines, small recessed screws at the corners, vents on the chest sides, and simple sticker-like stripe and chevron decals with no text. single isolated object, centered, on a plain white background",
+      "parts": [
+        {
+          "name": "head",
+          "slot": "head"
+        },
+        {
+          "name": "core",
+          "slot": "core",
+          "note": "chest / torso, the central body"
+        },
+        {
+          "name": "right_arm",
+          "slot": "arm_r"
+        },
+        {
+          "name": "left_arm",
+          "slot": "arm_l"
+        },
+        {
+          "name": "hips",
+          "slot": "legs"
+        },
+        {
+          "name": "left_leg",
+          "slot": "legs"
+        },
+        {
+          "name": "right_leg",
+          "slot": "legs"
+        }
+      ],
+      "styles": [
+        "Mecha Pop",
+        "Wood"
+      ]
+    },
+    {
+      "id": "robot_kanazuchi",
+      "file": "robot_kanazuchi.glb",
+      "kind": "parts",
+      "size_m": 0.5,
+      "size_note": "height 0.50 m (longest edge); 0.34 m wide, 0.20 m deep",
+      "triangles": 10000,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. A stocky heavy toy battle robot standing straight and facing the viewer, about one and a third times as tall as it is wide. A wide orange box-shaped head, about a quarter of the total height, with a dark visor band and a thin glowing cyan slit across the front and a short ridge on top. A broad charcoal-grey box chest, as wide as the shoulders. The arms hang straight down at the sides, attached at round shoulder joints and slightly apart from the body, and end at mid-thigh: the robot's own right arm (on the viewer's left) is thick and yellow and ends in a big rectangular hammer head instead of a hand; the robot's own left arm (on the viewer's right) is dark red and ends in a separate shiny silver cone-shaped drill bit with spiral grooves, pointing down, clearly a different piece from the red arm and joined to it by a round collar. A black hip block, clearly separate from the grey chest, then two separate thick blocky orange legs with big flat feet, standing slightly apart; the legs are about two fifths of the total height. The head, chest, each arm, the drill bit, the hips and each leg are separate pieces, each in its own single main colour; each piece fits snugly against the next with a crisp panel seam, no empty gaps. Fine toy details: engraved panel lines, small recessed screws at the corners, vents, and simple sticker-like stripe and chevron decals with no text. single isolated object, centered, on a plain white background",
+      "parts": [
+        {
+          "name": "head",
+          "slot": "head"
+        },
+        {
+          "name": "core",
+          "slot": "core",
+          "note": "chest / torso, the central body"
+        },
+        {
+          "name": "right_arm",
+          "slot": "arm_r",
+          "note": "includes the hammer head"
+        },
+        {
+          "name": "left_arm",
+          "slot": "arm_l"
+        },
+        {
+          "name": "drill_bit",
+          "slot": "arm_l",
+          "note": "spins in code around the arm's long axis"
+        },
+        {
+          "name": "hips",
+          "slot": "legs"
+        },
+        {
+          "name": "left_leg",
+          "slot": "legs"
+        },
+        {
+          "name": "right_leg",
+          "slot": "legs"
+        }
+      ],
+      "styles": [
+        "Mecha Pop",
+        "Wood"
+      ]
+    },
+    {
+      "id": "robot_popgun",
+      "file": "robot_popgun.glb",
+      "kind": "parts",
+      "size_m": 0.5,
+      "size_note": "height 0.50 m (longest edge); 0.34 m wide, 0.20 m deep",
+      "triangles": 10000,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. A round-bodied toy battle robot on caterpillar tracks, standing straight and facing the viewer, about one and a half times as tall as it is wide. A green dome-shaped head, about a quarter of the total height, with a small telescope eye on the robot's own right side and one small round eye on the other side, both facing forward. A yellow barrel-shaped chest, as wide as the shoulders. The arms hang straight down at the sides, attached at round shoulder joints and slightly apart from the body, and end at mid-thigh: the robot's own right arm (on the viewer's left) is black and ends in two short parallel gun barrels pointing down; the robot's own left arm (on the viewer's right) is red and carries a tall flat rectangular shield plate, like a lid, on its outer side. A low dark grey hip block, then two separate chunky caterpillar track units instead of legs, each dark green with two visible round wheels on the outside; the tracks are about two fifths of the total height. The head, chest, each arm, the hips and each track are separate pieces, each in its own single main colour; each piece fits snugly against the next with a crisp panel seam, no empty gaps. Fine toy details: engraved panel lines, small recessed screws at the corners, vents, and plain coloured stripe and chevron decals. The decals are blank shapes only: the robot carries no letters, no numbers, no logos, no emblems and no writing of any kind. single isolated object, centered, on a plain white background",
+      "parts": [
+        {
+          "name": "head",
+          "slot": "head"
+        },
+        {
+          "name": "core",
+          "slot": "core",
+          "note": "chest / torso, the central body"
+        },
+        {
+          "name": "right_arm",
+          "slot": "arm_r",
+          "note": "twin gun barrels"
+        },
+        {
+          "name": "left_arm",
+          "slot": "arm_l",
+          "note": "includes the lid shield plate"
+        },
+        {
+          "name": "hips",
+          "slot": "legs"
+        },
+        {
+          "name": "left_tread",
+          "slot": "legs"
+        },
+        {
+          "name": "right_tread",
+          "slot": "legs"
+        }
+      ],
+      "styles": [
+        "Mecha Pop",
+        "Wood"
+      ]
+    },
+    {
+      "id": "robot_hazama",
+      "file": "robot_hazama.glb",
+      "kind": "parts",
+      "size_m": 0.5,
+      "size_note": "height 0.50 m (longest edge); 0.34 m wide, 0.20 m deep",
+      "triangles": 10000,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. A slim fast toy battle robot hovering just above the ground, standing straight and facing the viewer, about one and a half times as tall as it is wide. A purple rounded capsule-shaped head, about a quarter of the total height, with a narrow glowing green visor across the front and one thin flat fin standing on top. A silver six-sided chest that tapers towards the waist, as wide as the shoulders at the top. The arms hang straight down at the sides, attached at round shoulder joints and slightly apart from the body, and end at mid-thigh: the robot's own right arm (on the viewer's left) is one simple white piece that ends in a flat straight blade marked with plain tick marks like a school ruler (no numbers), pointing down; the robot's own left arm (on the viewer's right) is one simple orange piece, a short round launch tube with a small rocket nose showing at its lower end. A small black hip block, then instead of legs one flared six-sided hover skirt in purple with a glowing green ring underneath; the skirt is about two fifths of the total height and ends a little above the ground. The head, chest, each arm, the hips and the skirt are separate pieces, each in its own single main colour; each piece fits snugly against the next with a crisp panel seam, no empty gaps. Fine toy details: engraved panel lines, small recessed screws at the corners, vents, and plain coloured stripe and chevron decals. The decals are blank shapes only: the robot carries no letters, no numbers, no logos, no emblems and no writing of any kind. single isolated object, centered, on a plain white background",
+      "parts": [
+        {
+          "name": "head",
+          "slot": "head"
+        },
+        {
+          "name": "core",
+          "slot": "core",
+          "note": "chest / torso, the central body"
+        },
+        {
+          "name": "right_arm",
+          "slot": "arm_r",
+          "note": "ruler blade"
+        },
+        {
+          "name": "left_arm",
+          "slot": "arm_l",
+          "note": "rocket launch tube"
+        },
+        {
+          "name": "hips",
+          "slot": "legs"
+        },
+        {
+          "name": "hover_skirt",
+          "slot": "legs"
+        }
+      ],
+      "styles": [
+        "Mecha Pop",
+        "Wood"
+      ]
+    },
+    {
+      "id": "arena_toybox",
+      "file": "arena_toybox.glb",
+      "kind": "prop",
+      "size_m": 5.1,
+      "size_note": "5.1 x 5.1 m outside, walls 0.6 m tall and 0.05 m thick",
+      "triangles": 3000,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. An empty open-top square wooden toy box seen from a high three-quarter angle. It is very shallow: the four walls are only about one eighth as tall as the box is wide, and the walls are thin. Warm light natural wood with a red painted rim along the top of every wall and small round bolts at the corners; a flat plain light floor inside with nothing on it. single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "toy_block",
+      "file": "toy_block.glb",
+      "kind": "prop",
+      "size_m": 0.25,
+      "size_note": "0.25 m cube",
+      "triangles": 500,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. One cube-shaped wooden toy alphabet block, exactly as tall as it is wide and deep, with slightly rounded edges. Natural light wood on the sides and top; the front face has a raised coloured square with a big bold raised capital letter A on it, facing the viewer. single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "cork_pellet",
+      "file": "cork_pellet.glb",
+      "kind": "prop",
+      "size_m": 0.04,
+      "size_note": "0.03 m across, 0.04 m long",
+      "triangles": 300,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. One short cylindrical cork stopper used as a toy gun pellet, a little longer than it is wide (four to three), light brown cork with flat ends, lying on its side. single isolated object, centered, on a plain white background",
+      "styles": "none"
+    },
+    {
+      "id": "bottle_rocket",
+      "file": "bottle_rocket.glb",
+      "kind": "prop",
+      "size_m": 0.14,
+      "size_note": "0.14 m long, 0.04 m across the body",
+      "triangles": 800,
+      "prompt": "Glossy 1990s Japanese plastic model-kit toy style: smooth injection-moulded plastic, bold saturated colours, crisp panel lines and chunky round bolts, clean simple shapes, soft studio lighting. One small toy bottle rocket lying on its side: a slim white round body about three and a half times as long as it is wide, a red cone nose at one end and three small red fins at the other end. single isolated object, centered, on a plain white background",
+      "styles": "none"
+    }
+  ],
+  "busiestMoment": {
+    "when": "A fight: both robots on screen, the toy box, 10 toy blocks, up to 6 corks and 2 rockets in the air; broken parts flying off are pieces of the robots already counted.",
+    "triangles": {
+      "robots": "2 x 10,000 = 20,000 (a mixed robot built from 4 different models is still about one robot's worth)",
+      "arena_toybox": 3000,
+      "toy_blocks": "10 x 500 = 5,000",
+      "corks": "6 x 300 = 1,800",
+      "rockets": "2 x 800 = 1,600",
+      "total": 31400
+    },
+    "textureMemory": {
+      "assumption": "Tripo exports up to 3 maps per model (colour, metal/roughness, normal). One map at 1024 px with mipmaps = 5.6 MB; at 512 px = 1.4 MB. Each robot's styles are separate texture sets.",
+      "worstCase": "Pipo can wear parts from up to 5 different model/paint combinations plus the rival's 1 = 6 robot texture sets on screen.",
+      "loadPlan": "Robots and the toy box are downscaled to 1024 px when loaded (a robot is at most about 300 px tall on screen, so 2K adds nothing visible); the block, cork and rocket to 512 px. On phones, normal maps are skipped (smooth plastic barely needs them).",
+      "desktopMB": "6 x 16.8 + 16.8 + 3 x 4.2 = about 130 MB",
+      "phoneMB": "6 x 11.2 + 11.2 + 3 x 2.8 = about 87 MB",
+      "drawCalls": "about 7 pieces per robot (one material each) x 2 + arena + 10 blocks + projectiles = about 40, about 80 with shadows"
+    },
+    "phoneVerdict": "Yes. About 31,000 triangles and about 87 MB of textures is well within what a phone from the last 5 years handles at 60 fps. It depends on shrinking the 2K textures when loading, which the swap stage will do."
+  }
+}

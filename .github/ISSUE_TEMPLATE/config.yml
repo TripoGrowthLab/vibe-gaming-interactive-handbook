@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/discussions
+    about: Ask how to do something, share work in progress, or suggest a new example game.

@@ -1,0 +1,48 @@
+<!doctype html><html><body style="margin:0;background:#fff;font:14px sans-serif">
+<div id="labels" style="position:fixed;inset:0;pointer-events:none"></div>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { BUILDERS } from '/src/registry.js';
+import { loadModels } from '/src/models.js';
+const ids = ['skier','skis','pine_tree','boulder','log','snowman','lift_pylon','edge_fence'];
+const { models, failed } = await loadModels('/assets/');
+const W = innerWidth, H = innerHeight;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(W, H); document.body.appendChild(renderer.domElement);
+renderer.setScissorTest(true);
+const pm = new THREE.PMREMGenerator(renderer);
+const env = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+const views = [['front (+Z side)', [0, 0.35, 1]], ['right side (−X)', [-1, 0.35, 0]], ['top (+Z down)', [0, 1, 0.001]], ['3/4', [-0.7, 0.45, 0.8]]];
+const rows = ids.length, cols = views.length, cw = W / cols, ch = H / rows;
+const labels = document.getElementById('labels');
+ids.forEach((id, r) => {
+  const scene = new THREE.Scene(); scene.background = new THREE.Color(0xf4f6fa); scene.environment = env;
+  scene.add(new THREE.DirectionalLight(0xffffff, 1.5));
+  const ph = BUILDERS[id](); 
+  const size = new THREE.Box3().setFromObject(ph).getSize(new THREE.Vector3());
+  const gap = Math.max(size.x, size.z) * 0.8 + 0.3;
+  ph.position.x = gap; scene.add(ph);
+  if (models[id]) { const m = models[id].template.clone(); m.position.x = -gap; scene.add(m); }
+  // +Z arrow on the ground
+  const arrow = new THREE.ArrowHelper(new THREE.Vector3(0,0,1), new THREE.Vector3(0,0.01,0), Math.max(size.z, 1) , 0xff0000);
+  scene.add(arrow);
+  const all = new THREE.Box3().setFromObject(scene);
+  const c = all.getCenter(new THREE.Vector3()), rad = all.getSize(new THREE.Vector3()).length() / 2;
+  views.forEach(([name, dir], col) => {
+    const cam = new THREE.PerspectiveCamera(30, cw / ch, 0.01, 200);
+    const d = new THREE.Vector3(...dir).normalize();
+    cam.position.copy(c).addScaledVector(d, rad / Math.sin(15 * Math.PI / 180) * 0.9);
+    if (col === 2) cam.up.set(0, 0, 1);
+    cam.lookAt(c);
+    const x = col * cw, y = H - (r + 1) * ch;
+    renderer.setViewport(x, y, cw, ch); renderer.setScissor(x, y, cw, ch);
+    renderer.render(scene, cam);
+    const l = document.createElement('div');
+    l.style.cssText = `position:absolute;left:${x + 4}px;top:${r * ch + 2}px;color:#333`;
+    l.textContent = `${id} — ${name}`;
+    labels.appendChild(l);
+  });
+});
+window.__result = { failed, note: 'model on the left, placeholder on the right in the front view; red arrow = +Z' };
+</script></body></html>

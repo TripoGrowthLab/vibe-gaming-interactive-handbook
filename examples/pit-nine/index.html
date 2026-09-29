@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Pit Nine</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="touch-layer"></div>
+    <div id="hud">
+      <div id="hp"><div id="hp-fill"></div><span id="hp-text">100</span></div>
+      <div id="top-mid"><div id="status"></div><div id="boss"></div></div>
+      <div id="buttons">
+        <button id="style-btn">Look</button>
+        <button id="model-btn">Models</button>
+        <button id="sound-btn">Sound: on</button>
+        <button id="restart-btn">Restart</button>
+        <a id="tripo-link" href="https://studio.tripo3d.ai/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=example_pit_nine_game" target="_blank" rel="noopener">Made with Tripo</a>
+      </div>
+      <div id="banner"></div>
+      <div id="controls"></div>
+      <div id="help">WASD move · mouse aim · hold click shoot · Space roll · R restart · L look · M models / greybox</div>
+      <button id="roll-btn">ROLL</button>
+      <div id="end"><h1></h1><p></p><button id="end-restart">Restart</button></div>
+      <div id="marks"></div>
+      <div id="loading">Loading Pit Nine…</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

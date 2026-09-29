@@ -1,0 +1,33 @@
+name: Prompt feedback
+description: The agent or Tripo Studio did not do what the prompt says.
+title: "[Prompt] "
+labels: ["prompt-feedback"]
+body:
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options: ["Questions", "1 Design", "2 Greybox", "3 Asset list", "4 Your turn (Tripo Studio)", "5 Swap", "6 Publish"]
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What the prompt says
+      description: Quote the line.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+      description: Agent output, a screenshot of the Studio screen, or what you had to do instead.
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Agent, model and prompt version
+      placeholder: "Claude Code, claude-opus-5-5, prompt 1.0"
+    validations:
+      required: true

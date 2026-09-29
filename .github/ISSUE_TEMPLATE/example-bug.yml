@@ -1,0 +1,31 @@
+name: Example does not run
+description: One of the example games fails to install, build or play.
+title: "[Example] "
+labels: ["example"]
+body:
+  - type: dropdown
+    id: example
+    attributes:
+      label: Example
+      options: ["ski", "lantern-alley", "pit-nine", "toy-box-bout"]
+    validations:
+      required: true
+  - type: dropdown
+    id: models
+    attributes:
+      label: Models
+      options: ["Greybox (no GLB files)", "With my own GLB files"]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command you ran, the error, and browser console output if the page loads.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: OS, Node.js and browser
+      placeholder: "macOS 16, Node 22.16, Chrome 150"
