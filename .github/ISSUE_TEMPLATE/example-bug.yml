@@ -7,7 +7,7 @@ body:
     id: example
     attributes:
       label: Example
-      options: ["ski", "lantern-alley", "pit-nine", "toy-box-bout"]
+      options: ["ski", "lantern-alley", "pit-nine"]
     validations:
       required: true
   - type: dropdown
