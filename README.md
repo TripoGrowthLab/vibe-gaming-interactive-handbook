@@ -16,7 +16,7 @@
 
 Paste one prompt into your coding agent. It designs a small browser game with you, builds a playable greybox, lists the 3D models it needs, and swaps in the models you make in Tripo Studio. You never write code; you play, give feedback and make the models.
 
-**1 prompt · 6 stages · 4 example games · 0 human interventions in all four builds**
+**1 prompt · 6 stages · 3 example games · 0 human interventions in all three builds**
 
 [Start here](#start-here) · [The prompt](#the-prompt) · [Example games](#example-games) · [Get the models](#get-the-models) · [Discussions](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/discussions) · [Changelog](prompt/CHANGELOG.md) · [Tripo Studio ↗](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_nav)
 
@@ -108,12 +108,9 @@ Each game was built from an empty folder with a version of this prompt, by Claud
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_ski"><img src="assets/games/ski.webp" width="420" alt="Snowdrift Dash"></a><br><strong><a href="#snowdrift-dash">Snowdrift Dash</a></strong><br><sub>Endless downhill skiing · prompt v3.2</sub><br><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_ski">Play ↗</a> · <a href="examples/ski">Source</a></td>
-<td width="50%" valign="top"><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_lantern_alley"><img src="assets/games/lantern-alley.webp" width="420" alt="LANTERN ALLEY"></a><br><strong><a href="#lantern-alley">LANTERN ALLEY</a></strong><br><sub>3D arcade beat 'em up · prompt v2</sub><br><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_lantern_alley">Play ↗</a> · <a href="examples/lantern-alley">Source</a></td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_pit_nine"><img src="assets/games/pit-nine.webp" width="420" alt="PIT NINE"></a><br><strong><a href="#pit-nine">PIT NINE</a></strong><br><sub>Top-down arena shooter · prompt v3</sub><br><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_pit_nine">Play ↗</a> · <a href="examples/pit-nine">Source</a></td>
-<td width="50%" valign="top"><a href="#toy-box-bout"><img src="assets/games/toy-box-bout.webp" width="420" alt="TOY BOX BOUT"></a><br><strong><a href="#toy-box-bout">TOY BOX BOUT</a></strong><br><sub>1v1 part-swapping robot battler · prompt v3.1</sub><br><a href="examples/toy-box-bout">Source</a> (not hosted yet)</td>
+<td width="33%" valign="top"><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_ski"><img src="assets/games/ski.webp" width="280" alt="Snowdrift Dash"></a><br><strong><a href="#snowdrift-dash">Snowdrift Dash</a></strong><br><sub>Endless downhill skiing · prompt v3.2</sub><br><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_ski">Play ↗</a> · <a href="examples/ski">Source</a></td>
+<td width="33%" valign="top"><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_lantern_alley"><img src="assets/games/lantern-alley.webp" width="280" alt="LANTERN ALLEY"></a><br><strong><a href="#lantern-alley">LANTERN ALLEY</a></strong><br><sub>3D arcade beat 'em up · prompt v2</sub><br><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_lantern_alley">Play ↗</a> · <a href="examples/lantern-alley">Source</a></td>
+<td width="33%" valign="top"><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_pit_nine"><img src="assets/games/pit-nine.webp" width="280" alt="PIT NINE"></a><br><strong><a href="#pit-nine">PIT NINE</a></strong><br><sub>Top-down arena shooter · prompt v3</sub><br><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_featured_pit_nine">Play ↗</a> · <a href="examples/pit-nine">Source</a></td>
 </tr>
 </table>
 
@@ -155,18 +152,6 @@ Claude Code · `claude-opus-5-5` · prompt v3 · 8 models, each in two styles ·
 
 Fight robot hounds, then shoot a giant machine apart: every broken part takes away one of its attacks. The hounds and the boss are split into parts in Tripo and moved in code, and one button switches the whole game to a second texture style. [Play ↗](https://handbook-pit-nine.tripo.page/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_section_pit_nine) · [Source](examples/pit-nine)
 
-<a id="toy-box-bout"></a>
-
-### TOY BOX BOUT
-
-Claude Code · `claude-opus-5-5` · prompt v3.1 · 8 models, robots in three paints · 0 human interventions
-
-| Greybox | With Tripo models |
-| :---: | :---: |
-| <img src="assets/games/toy-box-bout-greybox.webp" width="400" alt="TOY BOX BOUT in greybox"> | <img src="assets/games/toy-box-bout.webp" width="400" alt="TOY BOX BOUT with Tripo models"> |
-
-Plastic toy robots fight one on one inside a toy box. Break the rival's head to win, take one of its parts and fit it to your robot. Every robot is generated in parts, and each part fits any robot's matching slot. Japanese text with an English toggle. [Source](examples/toy-box-bout)
-
 Run any example:
 
 ```sh
@@ -194,7 +179,7 @@ Made something with the prompt? [Share it](https://github.com/TripoGrowthLab/vib
 ## Built with
 
 - [Tripo Studio](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_built_with): every 3D model in the example games
-- [Claude Code](https://github.com/anthropics/claude-code) with `claude-opus-5-5`: the coding agent that built all four games from the prompt
+- [Claude Code](https://github.com/anthropics/claude-code) with `claude-opus-5-5`: the coding agent that built all three games from the prompt
 - [three.js](https://threejs.org): rendering, animation and model loading
 - [Vite](https://vite.dev): dev server and build
 - [Playwright](https://playwright.dev): the agent's own play-tests and screenshots, in each example's `tools/`

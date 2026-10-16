@@ -1,6 +1,6 @@
 # Instructions for coding agents
 
-This repository holds a prompt for building small 3D browser games and four example games made with it.
+This repository holds a prompt for building small 3D browser games and three example games made with it.
 
 - **Starting a new game:** the user wants you to follow `prompt/vibe-gaming.md` (everything below its `---` line) in a new, empty folder, not inside this repository.
 - **Working on an example:** each folder in `examples/` is a separate Vite + three.js project. Run `npm install && npm run dev` inside that folder. Read its `README.md`, `GDD.md` and `assets.json` first.

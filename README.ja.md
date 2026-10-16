@@ -16,7 +16,7 @@
 
 コーディングエージェントにプロンプトをひとつ貼るだけ。エージェントがあなたと一緒に小さなブラウザゲームを設計し、まず遊べるグレーボックス版を作り、必要な 3D モデルを書き出し、あなたが Tripo Studio で作ったモデルに差し替えます。コードを書く必要はありません。あなたは遊んで、感想を伝えて、モデルを作るだけです。
 
-**プロンプト 1 つ · 6 ステージ · サンプルゲーム 4 本 · 4 本とも人の介入 0 回**
+**プロンプト 1 つ · 6 ステージ · サンプルゲーム 3 本 · 3 本とも人の介入 0 回**
 
 [はじめに](#start-here) · [プロンプト](#the-prompt) · [サンプルゲーム](#example-games) · [モデルを用意する](#get-the-models) · [ディスカッション](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/discussions) · [更新履歴](prompt/CHANGELOG.md) · [Tripo Studio ↗](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_ja_nav)
 
@@ -108,12 +108,9 @@ Test your own work before you hand it to me: run the build, open the game, check
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_ski"><img src="assets/games/ski.webp" width="420" alt="Snowdrift Dash"></a><br><strong><a href="#snowdrift-dash">Snowdrift Dash</a></strong><br><sub>エンドレス滑降スキー · プロンプト v3.2</sub><br><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_ski">遊ぶ ↗</a> · <a href="examples/ski">ソース</a></td>
-<td width="50%" valign="top"><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_lantern_alley"><img src="assets/games/lantern-alley.webp" width="420" alt="LANTERN ALLEY"></a><br><strong><a href="#lantern-alley">LANTERN ALLEY</a></strong><br><sub>3D ベルトスクロールアクション · プロンプト v2</sub><br><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_lantern_alley">遊ぶ ↗</a> · <a href="examples/lantern-alley">ソース</a></td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_pit_nine"><img src="assets/games/pit-nine.webp" width="420" alt="PIT NINE"></a><br><strong><a href="#pit-nine">PIT NINE</a></strong><br><sub>見下ろし型アリーナシューター · プロンプト v3</sub><br><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_pit_nine">遊ぶ ↗</a> · <a href="examples/pit-nine">ソース</a></td>
-<td width="50%" valign="top"><a href="#toy-box-bout"><img src="assets/games/toy-box-bout.webp" width="420" alt="TOY BOX BOUT"></a><br><strong><a href="#toy-box-bout">TOY BOX BOUT（トイボックス・バウト）</a></strong><br><sub>パーツ換装ロボット 1 対 1 バトル · プロンプト v3.1</sub><br><a href="examples/toy-box-bout">ソース</a>（オンライン版は準備中）</td>
+<td width="33%" valign="top"><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_ski"><img src="assets/games/ski.webp" width="280" alt="Snowdrift Dash"></a><br><strong><a href="#snowdrift-dash">Snowdrift Dash</a></strong><br><sub>エンドレス滑降スキー · プロンプト v3.2</sub><br><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_ski">遊ぶ ↗</a> · <a href="examples/ski">ソース</a></td>
+<td width="33%" valign="top"><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_lantern_alley"><img src="assets/games/lantern-alley.webp" width="280" alt="LANTERN ALLEY"></a><br><strong><a href="#lantern-alley">LANTERN ALLEY</a></strong><br><sub>3D ベルトスクロールアクション · プロンプト v2</sub><br><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_lantern_alley">遊ぶ ↗</a> · <a href="examples/lantern-alley">ソース</a></td>
+<td width="33%" valign="top"><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_pit_nine"><img src="assets/games/pit-nine.webp" width="280" alt="PIT NINE"></a><br><strong><a href="#pit-nine">PIT NINE</a></strong><br><sub>見下ろし型アリーナシューター · プロンプト v3</sub><br><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_ja_featured_pit_nine">遊ぶ ↗</a> · <a href="examples/pit-nine">ソース</a></td>
 </tr>
 </table>
 
@@ -155,18 +152,6 @@ Claude Code · `claude-opus-5-5` · プロンプト v3 · モデル 8 個、そ�
 
 ロボット犬を倒したあと、巨大マシンをパーツごとに撃ち落とします。パーツを壊すたびに攻撃がひとつ減ります。ロボット犬とボスは Tripo でパーツに分割し、コードで動かしています。ボタンひとつでゲーム全体を 2 つ目のテクスチャスタイルに切り替えられます。[遊ぶ ↗](https://handbook-pit-nine.tripo.page/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_ja_section_pit_nine) · [ソース](examples/pit-nine)
 
-<a id="toy-box-bout"></a>
-
-### TOY BOX BOUT（トイボックス・バウト）
-
-Claude Code · `claude-opus-5-5` · プロンプト v3.1 · モデル 8 個、ロボットは各 3 種の塗装 · 人の介入 0 回
-
-| グレーボックス | Tripo モデル |
-| :---: | :---: |
-| <img src="assets/games/toy-box-bout-greybox.webp" width="400" alt="TOY BOX BOUT グレーボックス版"> | <img src="assets/games/toy-box-bout.webp" width="400" alt="TOY BOX BOUT モデル版"> |
-
-おもちゃ箱の中で、プラスチックのおもちゃロボットが 1 対 1 で戦います。相手の頭を壊せば勝ち。勝ったら相手のパーツをひとつもらい、自分のロボットに付けられます。どのロボットもパーツ単位で生成されていて、どのパーツも別のロボットの同じスロットに付けられます。画面は日本語、英語にも切り替え可能です。[ソース](examples/toy-box-bout)
-
 サンプルの動かし方：
 
 ```sh
@@ -194,7 +179,7 @@ Tripo のモデル自体はこのリポジトリに含まれていません。�
 ## 使っているもの
 
 - [Tripo Studio](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_ja_built_with)：サンプルゲームの 3D モデルはすべてこれで作りました
-- [Claude Code](https://github.com/anthropics/claude-code)（モデル `claude-opus-5-5`）：このプロンプトで 4 つのゲームを作ったコーディングエージェント
+- [Claude Code](https://github.com/anthropics/claude-code)（モデル `claude-opus-5-5`）：このプロンプトで 3 つのゲームを作ったコーディングエージェント
 - [three.js](https://threejs.org)：描画、アニメーション、モデルの読み込み
 - [Vite](https://vite.dev)：開発サーバーとビルド
 - [Playwright](https://playwright.dev)：エージェント自身のテストプレイとスクリーンショット（各サンプルの `tools/`）

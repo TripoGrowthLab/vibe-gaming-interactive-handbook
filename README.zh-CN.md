@@ -16,7 +16,7 @@
 
 把一条提示词贴给你的 coding agent。它和你一起设计一个小型浏览器游戏，先做出能玩的灰盒，列出需要的 3D 模型，再把你在 Tripo Studio 里做好的模型换进去。你不用写代码，只需要试玩、提意见、做模型。
 
-**1 条提示词 · 6 个阶段 · 4 个示例游戏 · 4 个游戏都是 0 次人工干预**
+**1 条提示词 · 6 个阶段 · 3 个示例游戏 · 3 个游戏都是 0 次人工干预**
 
 [从这里开始](#start-here) · [提示词](#the-prompt) · [示例游戏](#example-games) · [获取模型](#get-the-models) · [讨论区](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/discussions) · [更新记录](prompt/CHANGELOG.md) · [Tripo Studio ↗](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_zh_nav)
 
@@ -108,12 +108,9 @@ agent 分 6 个阶段推进，每个阶段结束都会停下来等你：
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_ski"><img src="assets/games/ski.webp" width="420" alt="Snowdrift Dash"></a><br><strong><a href="#snowdrift-dash">Snowdrift Dash</a></strong><br><sub>无尽滑雪 · 提示词 v3.2</sub><br><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_ski">试玩 ↗</a> · <a href="examples/ski">源码</a></td>
-<td width="50%" valign="top"><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_lantern_alley"><img src="assets/games/lantern-alley.webp" width="420" alt="LANTERN ALLEY"></a><br><strong><a href="#lantern-alley">LANTERN ALLEY</a></strong><br><sub>3D 街机清版动作 · 提示词 v2</sub><br><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_lantern_alley">试玩 ↗</a> · <a href="examples/lantern-alley">源码</a></td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_pit_nine"><img src="assets/games/pit-nine.webp" width="420" alt="PIT NINE"></a><br><strong><a href="#pit-nine">PIT NINE</a></strong><br><sub>俯视角竞技场射击 · 提示词 v3</sub><br><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_pit_nine">试玩 ↗</a> · <a href="examples/pit-nine">源码</a></td>
-<td width="50%" valign="top"><a href="#toy-box-bout"><img src="assets/games/toy-box-bout.webp" width="420" alt="TOY BOX BOUT"></a><br><strong><a href="#toy-box-bout">TOY BOX BOUT</a></strong><br><sub>1v1 拼装机器人对战 · 提示词 v3.1</sub><br><a href="examples/toy-box-bout">源码</a>（暂无在线版）</td>
+<td width="33%" valign="top"><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_ski"><img src="assets/games/ski.webp" width="280" alt="Snowdrift Dash"></a><br><strong><a href="#snowdrift-dash">Snowdrift Dash</a></strong><br><sub>无尽滑雪 · 提示词 v3.2</sub><br><a href="https://handbook-snowdrift-dash.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_ski">试玩 ↗</a> · <a href="examples/ski">源码</a></td>
+<td width="33%" valign="top"><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_lantern_alley"><img src="assets/games/lantern-alley.webp" width="280" alt="LANTERN ALLEY"></a><br><strong><a href="#lantern-alley">LANTERN ALLEY</a></strong><br><sub>3D 街机清版动作 · 提示词 v2</sub><br><a href="https://handbook-lantern-alley.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_lantern_alley">试玩 ↗</a> · <a href="examples/lantern-alley">源码</a></td>
+<td width="33%" valign="top"><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_pit_nine"><img src="assets/games/pit-nine.webp" width="280" alt="PIT NINE"></a><br><strong><a href="#pit-nine">PIT NINE</a></strong><br><sub>俯视角竞技场射击 · 提示词 v3</sub><br><a href="https://handbook-pit-nine.tripo.page/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_zh_featured_pit_nine">试玩 ↗</a> · <a href="examples/pit-nine">源码</a></td>
 </tr>
 </table>
 
@@ -155,18 +152,6 @@ Claude Code · `claude-opus-5-5` · 提示词 v3 · 8 个模型，每个两种�
 
 先打机械猎犬，再把巨型机器一块块打下来：每打掉一个部件，它就少一种攻击。猎犬和 Boss 在 Tripo 里拆成部件、在代码里驱动；一个按钮就能把整局切换成第二种贴图风格。[试玩 ↗](https://handbook-pit-nine.tripo.page/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_zh_section_pit_nine) · [源码](examples/pit-nine)
 
-<a id="toy-box-bout"></a>
-
-### TOY BOX BOUT
-
-Claude Code · `claude-opus-5-5` · 提示词 v3.1 · 8 个模型，机器人各有三种涂装 · 0 次人工干预
-
-| 灰盒 | 换上 Tripo 模型 |
-| :---: | :---: |
-| <img src="assets/games/toy-box-bout-greybox.webp" width="400" alt="TOY BOX BOUT 灰盒"> | <img src="assets/games/toy-box-bout.webp" width="400" alt="TOY BOX BOUT 模型版"> |
-
-塑料玩具机器人在玩具箱里 1 对 1 对战。打坏对手的头就赢，赢了可以拿走对手的一个部件装到自己身上。每台机器人都是分部件生成的，部件可以装到任何机器人的对应槽位上。界面为日文，可切换英文。[源码](examples/toy-box-bout)
-
 运行任意示例：
 
 ```sh
@@ -194,7 +179,7 @@ npm install && npm run dev
 ## 用到的工具
 
 - [Tripo Studio](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_zh_built_with)：示例游戏里的全部 3D 模型
-- [Claude Code](https://github.com/anthropics/claude-code)，模型 `claude-opus-5-5`：用这条提示词做出四个游戏的 coding agent
+- [Claude Code](https://github.com/anthropics/claude-code)，模型 `claude-opus-5-5`：用这条提示词做出三个游戏的 coding agent
 - [three.js](https://threejs.org)：渲染、动画和模型加载
 - [Vite](https://vite.dev)：开发服务器和构建
 - [Playwright](https://playwright.dev)：agent 自己试玩和截图用的脚本，在每个示例的 `tools/` 里
