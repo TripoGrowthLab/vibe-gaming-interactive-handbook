@@ -1,6 +1,6 @@
-# Vibe Gaming Interactive Handbook
+# Vibe Gaming Interactive Playbook
 
-[![Stars](https://img.shields.io/github/stars/TripoGrowthLab/vibe-gaming-interactive-handbook?style=flat-square&color=14c9e6)](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/stargazers) [![Prompt 1.1](https://img.shields.io/badge/Prompt-1.1-7c3aed?style=flat-square)](prompt/vibe-gaming.md) [![License: MIT](https://img.shields.io/badge/License-MIT-64748b?style=flat-square)](LICENSE) [![check](https://img.shields.io/github/actions/workflow/status/TripoGrowthLab/vibe-gaming-interactive-handbook/check.yml?branch=main&style=flat-square&label=examples%20build)](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/actions/workflows/check.yml)
+[![Stars](https://img.shields.io/github/stars/TripoGrowthLab/vibe-gaming-interactive-playbook?style=flat-square&color=14c9e6)](https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook/stargazers) [![Prompt 1.1](https://img.shields.io/badge/Prompt-1.1-7c3aed?style=flat-square)](prompt/vibe-gaming.md) [![License: MIT](https://img.shields.io/badge/License-MIT-64748b?style=flat-square)](LICENSE) [![check](https://img.shields.io/github/actions/workflow/status/TripoGrowthLab/vibe-gaming-interactive-playbook/check.yml?branch=main&style=flat-square&label=examples%20build)](https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook/actions/workflows/check.yml)
 
 <p>
   <a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-✓-238636?style=flat-square"></a>
@@ -10,7 +10,7 @@
 
 > Looking for ideas first? Browse [Awesome 3D Prompts](https://github.com/TripoGrowthLab/awesome-3d-prompts) and [Awesome Opus 5.5 Prompts](https://github.com/TripoGrowthLab/awesome-opus-5-5-prompts).
 
-<a href="https://studio.tripo3d.ai/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_hero"><img src="assets/hero.webp" width="100%" alt="Vibe Gaming Interactive Handbook: the same game world as a greybox prototype and with finished 3D models"></a>
+<a href="https://studio.tripo3d.ai/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=vibe_gaming_interactive_handbook&amp;utm_content=readme_hero"><img src="assets/hero.webp" width="100%" alt="Vibe Gaming Interactive Playbook: the same game world as a greybox prototype and with finished 3D models"></a>
 
 **One prompt. An empty folder. A 3D game you can share.**
 
@@ -18,7 +18,7 @@ Paste one prompt into your coding agent. It designs a small browser game with yo
 
 **1 prompt · 6 stages · 3 example games · 0 human interventions in all three builds**
 
-[Start here](#start-here) · [The prompt](#the-prompt) · [Example games](#example-games) · [Get the models](#get-the-models) · [Discussions](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/discussions) · [Changelog](prompt/CHANGELOG.md) · [Tripo Studio ↗](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_nav)
+[Start here](#start-here) · [The prompt](#the-prompt) · [Example games](#example-games) · [Get the models](#get-the-models) · [Discussions](https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook/discussions) · [Changelog](prompt/CHANGELOG.md) · [Tripo Studio ↗](https://studio.tripo3d.ai/?utm_source=github&utm_medium=referral&utm_campaign=vibe_gaming_interactive_handbook&utm_content=readme_nav)
 
 <img src="assets/greybox-to-models.webp" width="100%" alt="Each example game switching from its greybox to Tripo models">
 
@@ -71,7 +71,7 @@ Then work in stages. Stop at the end of every stage, tell me how to try it, and 
 
    Add up the triangles and texture memory for the busiest moment on screen and say whether a phone can handle it. A Tripo model that is not a hero has colour textures only: one at the chosen resolution, or one per piece for a split model, smaller for small pieces. A hero has three 4K textures (colour, normal and metal-rough), shared by all its pieces. Count a split model that is not a hero at 1.5 times its budget, because filling its gaps adds triangles.
 
-4. My turn — do not try to generate the models yourself. Give me one table with a row per entry: id, kind, hero or not, prompt, polygon budget, file name, animations or parts, and styles or texture prompt (or "none"). Then tell me to make them in Tripo Studio by following these steps, which cover every kind of entry, heroes, styles, colour versions and export: https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/blob/main/prompt/tripo-studio-steps.md . Wait until I say they are in.
+4. My turn — do not try to generate the models yourself. Give me one table with a row per entry: id, kind, hero or not, prompt, polygon budget, file name, animations or parts, and styles or texture prompt (or "none"). Then tell me to make them in Tripo Studio by following these steps, which cover every kind of entry, heroes, styles, colour versions and export: https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook/blob/main/prompt/tripo-studio-steps.md . Wait until I say they are in.
 
 5. Swap — load each GLB in place of its placeholder: scale it to the size in the list (people by height), sit it on the ground, and add an environment map so materials are not black. Keep every map a model comes with (colour, normal, metal-rough) and its metal and roughness values; only a model with a colour map alone gets roughness 1 and metalness 0. Render every model next to its placeholder and check it faces the same way; rotate it if it does not. Do this again whenever a model is replaced: a new version can face another way and has new UVs, so its style and colour files must be made again from it. First list what is really inside each file: animation names (Tripo often renames them: defeat_02 can come out as defeat_03, and a Text to Motion clip is named after the start of its description) and, for split models, every piece with its name, size and position. Match animations by the closest name. Match pieces by name first; a piece still called tripo_part_N belongs to a part only if its centre sits inside that part's placeholder, and to the body otherwise, so group them in code; print the pieces of each part and check them on a render before you move any hinge. The sizes stored in the file are not reliable, so recompute each bounding box before you measure anything. The order of meshes changes from file to file, so always match pieces by node name. Tell me what you matched and what is missing. Every piece keeps the whole model's origin: move each part's pivot to its hinge before you turn it, and since a few pieces may still have small holes, make sure nothing looks see-through when a part comes off (close it, show both sides, or put something dark behind it). Merge the pieces of each part into one mesh when they share one material (a hero with parts comes that way) or when draw calls hurt on a phone. If parts can be swapped between machines, line up where each part joins with its slot's attach point and scale it to fit the slot. When a swapped part has a different height, such as another machine's legs, seat everything above it on the new part's real height and hinges, not the old part's or the placeholder's, so nothing floats or sinks. If an entry has style versions, they have the same shape, but Tripo can change their UVs: compare each style's UVs with the default file's, and where they differ, use that style file's own mesh with its textures, cut into the same parts or bound to the same skeleton. List which maps each style file has; a style may come without a metal-rough map. Look at each version and tell me if one does not match its prompt, and add a button that switches skins, loading each style only the first time it is chosen. Never pair the shape data of one file with another file. Put a close-up of each model in the game next to how it looks in Tripo Studio; if colours look washed out or flat, fix the lighting (one main light that casts shadows, less flat ambient light, the right colour space), not the textures.
 
@@ -155,8 +155,8 @@ Fight robot hounds, then shoot a giant machine apart: every broken part takes aw
 Run any example:
 
 ```sh
-git clone https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook.git
-cd vibe-gaming-interactive-handbook/examples/ski
+git clone https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook.git
+cd vibe-gaming-interactive-playbook/examples/ski
 npm install && npm run dev
 ```
 
@@ -172,7 +172,7 @@ The Tripo models themselves are not in this repository; your generations will di
 
 ## Show your game
 
-Made something with the prompt? [Share it](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=show-your-game.yml) with a link and a screenshot. Found a step where the agent or Tripo Studio did not do what the prompt says? [Report it](https://github.com/TripoGrowthLab/vibe-gaming-interactive-handbook/issues/new?template=prompt-feedback.yml); every line in the prompt came from a report like that. See [contributing](CONTRIBUTING.md).
+Made something with the prompt? [Share it](https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook/issues/new?template=show-your-game.yml) with a link and a screenshot. Found a step where the agent or Tripo Studio did not do what the prompt says? [Report it](https://github.com/TripoGrowthLab/vibe-gaming-interactive-playbook/issues/new?template=prompt-feedback.yml); every line in the prompt came from a report like that. See [contributing](CONTRIBUTING.md).
 
 <a id="built-with"></a>
 

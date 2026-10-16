@@ -21,7 +21,7 @@ No models are included, so the game runs in greybox: the skier and every obstacl
 
 `src/data/skier_arms.json` holds arm corrections measured on the original skier; with your own skier, have your agent re-measure it with the pages in `tools/lab/`, or expect some arm clipping. Your generations will not match the originals exactly, so ask your agent to check each model against its greybox (stage 5 of the prompt).
 
-`src/embed.js` lets a page that embeds the game in an iframe switch between greybox and models with `postMessage`; it only trusts the handbook's own origins and localhost, and does nothing outside an iframe.
+`src/embed.js` lets a page that embeds the game in an iframe switch between greybox and models with `postMessage`; it only trusts the playbook's own origins and localhost, and does nothing outside an iframe.
 
 ## How it was made
 
